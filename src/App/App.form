@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="App">
+  <grid id="27dc6" binding="MainPanel" layout-manager="GridLayoutManager" row-count="8" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="10" left="10" bottom="10" right="10"/>
+    <constraints>
+      <xy x="69" y="65" width="553" height="700"/>
+    </constraints>
+    <properties>
+      <maximumSize width="400" height="400"/>
+      <minimumSize width="553" height="700"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="78154" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="18"/>
+          <text value="By : Steven Tjhia (13522103)"/>
+        </properties>
+      </component>
+      <component id="3a702" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="24"/>
+          <text value="Word Ladder"/>
+        </properties>
+      </component>
+      <grid id="2c02a" binding="StartInputPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="3" column="0" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="737f1" class="javax.swing.JLabel" binding="StartWordLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font size="14"/>
+              <text value="Start Word"/>
+            </properties>
+          </component>
+          <component id="dd96e" class="javax.swing.JTextField" binding="StartWordTextField">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <text value=""/>
+              <toolTipText value="Start Word"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="9c69" binding="TargetInputPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="3" column="2" row-span="2" col-span="1" vsize-policy="3" hsize-policy="3" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="a8233" class="javax.swing.JLabel" binding="TargetWordLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font size="14"/>
+              <text value="Target Word"/>
+            </properties>
+          </component>
+          <component id="75831" class="javax.swing.JTextField" binding="TargetWordTextField">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <dragEnabled value="false"/>
+              <margin top="2" left="6" bottom="2" right="6"/>
+              <text value=""/>
+              <toolTipText value="Target Word"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="1ad57" binding="ResultPanel" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="6" column="0" row-span="2" col-span="3" vsize-policy="7" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="f18ef" class="javax.swing.JLabel" binding="NodeCheckedLabel">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Node Checked : xx"/>
+            </properties>
+          </component>
+          <component id="9aaa8" class="javax.swing.JLabel" binding="ExecutionTimeLabel">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="Execution Time : xxx ms"/>
+            </properties>
+          </component>
+          <component id="b509" class="javax.swing.JLabel" binding="ResultLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <enabled value="false"/>
+              <font size="18"/>
+              <foreground color="-16777216"/>
+              <text value="Result"/>
+            </properties>
+          </component>
+          <component id="f910b" class="javax.swing.JLabel" binding="BlankLabel1">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <scrollpane id="a3b97" binding="ResultScrollPane">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="2" indent="0" use-parent-layout="false">
+                <minimum-size width="500" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="3b556" class="javax.swing.JList" binding="ResultList">
+                <constraints/>
+                <properties>
+                  <background color="-1118482"/>
+                </properties>
+              </component>
+            </children>
+          </scrollpane>
+        </children>
+      </grid>
+      <component id="fe808" class="javax.swing.JButton" binding="SolveButton">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="30" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <horizontalTextPosition value="0"/>
+          <text value="SOLVE"/>
+        </properties>
+      </component>
+      <component id="bada0" class="javax.swing.JLabel" binding="AlgorithmLabel">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font size="11"/>
+          <text value="Algorithm"/>
+        </properties>
+      </component>
+      <component id="7306b" class="javax.swing.JComboBox" binding="AlgorithmDrowDown">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="30" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <model>
+            <item value="Uniform Cost Search"/>
+            <item value="Greedy Best First Search"/>
+            <item value="A*"/>
+          </model>
+        </properties>
+      </component>
+      <component id="af84" class="javax.swing.JLabel" binding="BlankLabel">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
