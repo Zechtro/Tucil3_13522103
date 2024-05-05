@@ -117,24 +117,13 @@ public class WordLadder {
         visitedNode.put(word, true);
         int lenWord = word.length();
         for(int i=0;i < lenWord;i++){
-            for(int j=0;j < alphaChars.length();j++){
-                String tempWord = word.substring(0, i) + alphaChars.charAt(j) + word.substring(i+1, lenWord);
-                if(isInVocabulary(tempWord) && !isVisited(tempWord)){
-                    visitedNode.put(tempWord, true);
+            for(int j=0;j < alphaChars.length();j++) {
+                String tempWord = word.substring(0, i) + alphaChars.charAt(j) + word.substring(i + 1, lenWord);
+                if (isInVocabulary(tempWord) && !isVisited(tempWord)) {
                     Node newNode = createNodeBasedOnAlgorithm(tempWord, node);
                     newNode.setPriority();
-                    this.nodeChecked++;
-                    if(tempWord.equals(this.targetWord)){
-                        this.isFound = true;
-                        this.targetFoundNode = newNode;
-                        break;
-                    }else{
-                        enqueueToPrioQueue(newNode);
-                    }
+                    enqueueToPrioQueue(newNode);
                 }
-            }
-            if(this.isFound){
-                break;
             }
         }
     }
@@ -152,21 +141,26 @@ public class WordLadder {
     }
 
     public void process(){
-        this.nodeChecked++;
-        if(startWord.equals(targetWord)){
-            this.resultList.add(targetWord);
-        }else{
-            Node rootNode = createNodeBasedOnAlgorithm(startWord, null);
-            rootNode.setPriority();
-            enqueueToPrioQueue(rootNode);
-            while (!prioQueue.isEmpty() && !isFound) {
+        Node rootNode = createNodeBasedOnAlgorithm(startWord, null);
+        rootNode.setPriority();
+        enqueueToPrioQueue(rootNode);
+        while (!prioQueue.isEmpty() && !isFound) {
+            if (prioQueue.peek().getWord().equals(targetWord)) {
+                this.isFound = true;
+                this.targetFoundNode = prioQueue.peek();
+                this.nodeChecked++;
+            }else if(!isVisited(prioQueue.peek().getWord())){
+                visitedNode.put(prioQueue.peek().getWord(),true);
                 generatePossibleChildNode(dequeueFromPrioQueue());
-            };
-            if(isFound){
-                this.resultList = this.targetFoundNode.getResultList();
+                this.nodeChecked++;
             }else{
-                this.resultList.add("No Possible Path :(");
+                dequeueFromPrioQueue();
             }
+        };
+        if(isFound){
+            this.resultList = this.targetFoundNode.getResultList();
+        }else{
+            this.resultList.add("No Possible Path :(");
         }
     }
 
