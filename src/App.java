@@ -80,7 +80,7 @@ public class App extends JFrame{
                     // length of start word and target word must be the same
                     System.out.println("Different Length");
                     dataList.add("Start word and target word length must be the same");
-                }else if ( !game.isInVocabulary(startWord) && !game.isInVocabulary(endWord)){
+                }else if ( !game.isInVocabulary(startWord) || !game.isInVocabulary(endWord)){
                     // input word must be in english dictionary
                     System.out.println("Not in Vocabulary");
                     dataList.add("Input word not in vocabulary");

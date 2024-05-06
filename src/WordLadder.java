@@ -77,11 +77,12 @@ public class WordLadder {
 
     private void enqueueToPrioQueue(Node n){
         this.prioQueue.add(n);
-        if(this.algorithm.equals("GBFS")){
-            Node temp = dequeueFromPrioQueue();
-            prioQueue.clear();
-            prioQueue.add(temp);
-        }
+//        Bagian ini di un-comment jika Greedy Best First tidak boleh backtrack
+//        if(this.algorithm.equals("GBFS")){
+//            Node temp = dequeueFromPrioQueue();
+//            prioQueue.clear();
+//            prioQueue.add(temp);
+//        }
     }
 
     private Node dequeueFromPrioQueue(){
