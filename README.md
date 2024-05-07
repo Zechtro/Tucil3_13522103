@@ -65,6 +65,7 @@
 1. Input Start Word and End Word, both length must be the same.
 2. Choose the algorithm to solve the problem.
 3. Wait for the result to show up.
+4. (If you want) Change the dictionary at EnglishVocabulary.txt in "test" directory -- Do not change the directory and file name.
 
 
 ## Project Status
