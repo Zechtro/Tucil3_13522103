@@ -48,7 +48,6 @@ public class Node {
     };
 
     public List<String> getResultList(){
-        // TO DO: List<String>
         List<String> listOut = new ArrayList<>();
         listOut.add(this.word);
         Node currParent = this.parent;
